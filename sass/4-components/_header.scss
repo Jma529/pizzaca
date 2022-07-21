@@ -1,0 +1,210 @@
+
+/* Front page */
+
+.page-template-front-page {
+	.header {
+		background-color: rgba(36, 40, 42, .5);
+	}
+	.header-logo {
+		display: none;
+	}
+}
+
+.header {
+	background-color: $color__dark;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+
+	@include breakpoint(sm){
+		width: 100%;
+	}
+	.header-wrapper {
+		display: flex;
+		padding: 25px;
+
+		@include breakpoint(sm) {
+			padding: 10px;
+			flex-direction: column;
+			align-items: center;
+			height: auto;
+		}
+	}
+
+  
+	.main-navigation {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		width: 100%;
+
+		&.toggled {
+			width: auto;
+			height: auto;
+
+			
+		}
+
+		.menu-items {
+			display: flex;
+			align-items: center;
+
+
+			@include breakpoint(sm) {
+				margin-top: 40px;
+			}
+
+		}
+
+		ul {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+
+			@include breakpoint(sm) {
+				display: none;
+			}
+
+		}
+
+				li {
+					padding: 40px;
+
+					&:hover > ul,
+					&.focus > ul {
+						display: block;
+						left: auto;
+					}
+				}
+
+				a {
+					color: $color__text-main-rev;
+					font-family: $font__headings;
+					font-size: 18px;
+					text-transform: uppercase;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+				}
+
+				:hover > a,
+				.focus > a {
+				}
+
+				a:hover,
+				a.focus {
+				}
+			}
+
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
+			}
+		}
+
+		li {
+			position: relative;
+
+			&:hover > a,
+			&.focus > a {
+				text-decoration: underline;
+			}
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: white;
+		}
+	
+
+/* Small menu. */
+
+.menu-toggle {
+	display: none;
+	color: white;
+ 
+
+	@include breakpoint(sm) {
+	display: flex;
+	position: absolute;
+	}
+}
+
+.main-navigation.toggled ul {
+	@include breakpoint(sm) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+
+	//=============================================================================================================
+// Contact Info
+//=============================================================================================================
+.social-icons {
+	display: flex;
+
+	@include breakpoint(md){
+		justify-content: center;
+	}
+	
+	.social-icon {
+	padding: 5px;
+	}
+}
+//=============================================================================================================
+// Logo
+//=============================================================================================================
+
+	.header-logo {
+		width: 150px;
+
+		@include breakpoint(sm) {
+			width: auto;
+			display: flex;
+			justify-content: space-between;
+			margin: 16px 0;
+		}
+	
+		.logo {
+			width: 300px;
+			display: block;
+
+			@include breakpoint(sm){
+				width: 100px;
+			}
+		}
+  }
+  
+	// Cart icon
+
+	.cart-icon {
+		position: absolute;
+    top: 20px;
+    right: 20px;
+	}

@@ -1,0 +1,118 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// Media query mixin - takes either a string or paired px-value arguments:
+// breakpoint(xs)             Predefined breakpoint (see below)
+// breakpoint(768px, 0)       Setting only a min-width breakpoint
+// breakpoint(0, 767px)       Setting only a max-width breakpoint
+// breakpoint(320px, 480px)   Setting a min-width and max-width breakpoint
+
+@mixin breakpoint($min: 0, $max: 0) {
+	$type: type-of($min);
+	@if $type == string {
+	  @if $min == xs        { @media only screen and (max-width: 576px) { @content; } }
+	  @else if $min == sm   { @media only screen and (max-width: 768px) { @content; } }
+	  @else if $min == md   { @media only screen and (max-width: 992px) { @content; } }
+	  @else if $min == lg   { @media only screen and (max-width: 1200px) { @content; } }
+	  @else if $min == xl   { @media only screen and (max-width: 1600px) { @content; } }
+	  @else if $min == xxl  { @media only screen and (min-width: 1601px) { @content; } }
+  
+	  // Media query for screen height <= 800px
+	  @else if $min == ht   { @media only screen and (max-height: 815px) { @content; } }
+  
+	  @else {
+		@warn "Check your string - refer to breakpoint.sass";
+	  }
+	}
+	@else if $type == number {
+	  $query: "all" !default;
+	  @if $min != 0 and $max != 0         { $query: "(min-width: #{$min}) and (max-width: #{$max})" }
+	  @else if $min != 0 and $max == 0    { $query: "(min-width: #{$min})" }
+	  @else if $min == 0 and $max != 0    { $query: "(max-width: #{$max})" }
+	  @media #{$query}                    { @content; }
+	}
+  }
+  
+  // Hover/focus/active states mixing - ties into what-input.js to disable hover states on touch devices using the intent parameter
+  @mixin on-state($targets...) {
+  
+	$states: hover, focus, active;
+	$selectors: ();
+	
+	@if $targets != '' {
+	  @each $target in $targets {
+		@if index($states, $target) {
+		  $selectors: append($selectors, "html:not([data-whatintent='touch']) &:#{$target}", comma);
+		} @else {
+		  @warn "'#{$target}' is not a valid state.";
+		}
+	  }
+	} @else {
+	  @warn "No states have been specified.";
+	}
+  
+	#{$selectors} { 
+	  @content;
+	}
+  }
+  
+  // Inset focus ring for elements that need it
+  @mixin inset-focus {
+	html:not([data-whatintent='touch']) &:focus {
+	  box-shadow: $focus-ring-inset;
+	}
+  }
+  
+  // Font size mixin - takes a size argument as number:
+  // font-size(16)
+  @mixin font-size($sizeValue: 1.6) {
+	font-size: $sizeValue + px;
+	font-size: $sizeValue + rem;
+  }
+  
+  // Clearfix mixin - no args required
+  // Clears a parent beyond floated child elements
+  @mixin clearfix {
+	zoom: 1;
+  
+	&:before,
+	&:after {
+	  content: '\0020';
+	  display: block;
+	  overflow: hidden;
+	  visibility: hidden;
+	  width: 0;
+	  height: 0;
+	}
+  
+	&:after {
+	  clear: both;
+	}
+  }
+  
+  // Visual hide mixin - no args required
+  // Hides an element from visual display without affecting its accessibility
+  @mixin visual-hide {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+  }
+  
+  .visual-hide {
+	@include visual-hide;
+  }
+  

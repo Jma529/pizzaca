@@ -1,0 +1,44 @@
+a {
+	color: $color__link;
+
+	&.link-dark {
+		color: $color__dark;
+
+		&:hover {
+			color: $color__dark;
+			text-decoration: underline;
+		}
+	}
+
+	&.wc-quick-view-button {
+		color: $color__dark;
+
+		&:visited {
+			color: $color__gray;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: underline;
+	}
+}
+
+	&:visited {
+		color: $color__link-visited;
+}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

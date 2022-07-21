@@ -1,0 +1,55 @@
+/*
+Theme Name: Pizzaca
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3d9cd2;
+
+button {
+  background-color: black;
+    color: white;
+  }
+  
+  td.product-thumbnail, th.product-thumbnail {
+    display: none !important;
+  }
+  
+  .product-name a, .product-remove a, .product-subtotal, .wc-proceed-to-checkout a {
+    color: black !important;
+  }
+  .wc-proceed-to-checkout a, .shipping-calculator-button  {
+    text-decoration: underline;
+    font-size: 18px
+  }
+  
+  
+  .wp-block-button__link {
+    color: $color__text-main;
+    border: 1px solid $color__text-main;
+    border-radius: 0px;
+    padding: 10px 20px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color__text-main;
+      color: $color__text-main-rev;
+    }
+
+    &:visited {
+      color: $color__gray;
+    }
+  }
+
+  .wp-block-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  /* Add ons */
+

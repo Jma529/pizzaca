@@ -1,0 +1,92 @@
+
+//=============================================================================================================
+// Fonts
+//=============================================================================================================
+
+// stylelint-disable value-keyword-case
+$font__main: 'Jost', Helvetica, Arial, sans-serif;
+$font__headings: 'AkrobatExtraBold', Helvetica, Arial, sans-serif;
+$font__accent: 'Cervantis';
+// stylelint-enable value-keyword-case
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+
+
+//=============================================================================================================
+// Colors
+//=============================================================================================================
+
+$color__gray: #53565a;
+$color__black: #000000;
+$color__light: #f1eed6;
+$color__dark: #24282a;
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__backgroud-black: #000000;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #f1eed6; 
+$color__link-visited: #fcfce5; 
+$color__link-hover: #fcfce5; 
+$color__text-main: #24282a;
+$color__text-main-rev: #f1eed6;
+$color__text-black: #000000;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+//=============================================================================================================
+// Layout
+//=============================================================================================================
+
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+$columns__margin: 3.8%;
+
+$container-width:           1300px;
+$container-pad-mobile:      20px;
+$container-pad-tablet:      50px;
+$container-pad:             80px;
+
+$gutters:                   10px;
+
+
+$content-line-break:        20px;
+$content-paragraph-break:   50px;
+
+$constrain-page:            90vw;
+$constrain-content:         750px;
+
+$border-thickness:          1px;
+
+$header-height-desktop:     91px;
+$header-height-tablet:      91px;
+$header-height-mobile:      65px;
+
