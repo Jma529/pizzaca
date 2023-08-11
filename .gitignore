@@ -1,0 +1,87 @@
+
+# ignore everything in the root except the "wp-content" and directory.
+/*
+wp-includes/*
+wp-admin/*
+!wp-content/
+!databases/
+
+# ignore everything in the "wp-content" directory, except:
+# mu-plugins, plugins, and themes directories
+wp-content/*
+!wp-content/themes/
+wp-content/uploads
+
+# ignore all mu-plugins, plugins, and themes
+# unless explicitly whitelisted at the end of this file
+# wp-content/mu-plugins/*
+# wp-content/plugins/*
+wp-content/themes/*
+wp-content/themes/jillaaa/resources/fonts
+
+# ignore all files starting with . or ~
+.*
+~*
+
+# ignore node dependency directories
+node_modules/
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
+!README.md
+!CHANGELOG.md
+!composer.json
+
+# track favicon files, if they exist
+!android-chrome-*.png
+!apple-touch-icon*.png
+!browserconfig.xml
+!favicon*.png
+!favicon*.ico
+!manifest.json
+!mstile-*.png
+!safari-pinned-tab.svg
+!site.webmanifest
+
+# track these mu-plugins, plugins, and themes
+# add your own entries here
+# !wp-content/mu-plugins/example-mu-plugin/
+# !wp-content/plugins/example-plugin/
+!wp-content/themes/pizzaca
