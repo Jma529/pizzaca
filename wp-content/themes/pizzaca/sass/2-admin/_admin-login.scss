@@ -1,0 +1,225 @@
+html {
+	font-size: 6.25%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: common-ligatures;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body.login {
+
+	@include font-size(14);
+	font-weight: 300;
+
+	a {
+		transition: 0.3s ease-in-out;
+
+		&:hover, &:focus {
+			// color: $color-aqua;
+		}
+	}
+
+	// Everything is contained in this ID tag so it doesn't apply to the new email confirmation screen added in 5.3
+	#login {
+		padding: 10% 25px 50px 25px;
+		// border-radius: $corners;
+		margin: auto;
+		min-width: 362px; // Min width to match recaptcha width
+	}
+	
+	// Logo
+	h1 a {
+		background-image: none, url('../media/images/logo-cheeditha.svg');
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: contain;
+		// color: $color-aqua;
+		display: block;
+		font-size: 20px;
+		font-weight: normal;
+		width: 225px;
+		height: 64px;
+		line-height: 1.3em;
+		margin: 0 auto 30px;
+		outline: medium none;
+		overflow: hidden;
+		padding: 0;
+		text-decoration: none;
+		text-indent: -9999px;
+	}
+
+	p {
+		margin: 0 0 7px 0;
+
+		&#nav, &#backtoblog {
+			margin: 24px 0 0 0;
+		}
+
+		&.forgetmenot {
+			display: block;
+			width: 100%;
+			padding: 0 0 20px 0;
+
+			label {
+				position: relative;
+				top: 1px;
+				width: auto;
+			}
+		}
+	}
+
+	label {
+		width: 100%;
+		font-weight: 300;
+		margin: 0;
+	}
+
+	form {
+		// background: $color-grey-200 none repeat scroll 0 0;
+		border: none;
+		box-shadow: none;
+		// border-radius: $corners;
+		font-weight: normal;
+		margin-left: 0;
+		margin-top: 20px;
+		overflow: hidden;
+		padding: 30px;
+		transition: 0.3s ease-in-out;
+
+		&.admin-email-confirm-form {
+			max-width: 480px;
+			margin: 0 auto;
+			text-align: center;
+
+			.admin-email__heading {
+				border: none;
+				padding: 0;
+				font-weight: 300;
+				// color: $color-white;
+				text-align: center;
+			}
+
+			p {
+				font-weight: 300;
+			}
+
+			.admin-email__actions .button-primary {
+				margin: 20px 0 0 0;
+			}
+		}
+
+		.input {
+			font-weight: normal;
+			@include font-size(14);
+			width: 100%;
+			padding: 13px 15px 15px 15px;
+			margin: 8px 0 20px 0;
+			box-shadow: none;
+			// border: $border-thickness solid $color-grey-400;
+			// background-color: $color-grey-200;
+			// color: $color-white;
+			// border-radius: $corners;
+			background-position-x: 95% !important;
+			transition: 0.3s ease-in-out;
+
+			&:hover, &:focus {
+				// border-color: $color-aqua;    
+			}
+
+			&:focus {
+				// border-color: $color-aqua;
+			}
+		}
+
+		p.submit {
+			margin: 0 !important;
+		}
+	}
+
+	// Show/hide password toggle added in 5.3
+	.button.wp-hide-pw {
+		right: 4px;
+		top: 12px;
+		// color: $color-white;
+
+		.dashicons {
+			width: 20px;
+			height: 20px;
+			top: 4px;
+		}
+	}
+
+	// Remember me checkbox
+	input[type="checkbox"], 
+	input[type="radio"] {
+		box-shadow: none;
+		border-radius: 50px;
+		// border: 1px solid $color-grey-500;
+		width: 26px;
+		height: 26px;
+		margin: 0 8px 0 0;
+		// background-color: $color-grey-200;
+	}
+
+	// Remember me checkbox ticked
+	input[type="checkbox"]:checked:before {
+		margin: 2px 0 0 0;
+		// color: $color-aqua;
+		font-size: 22px;
+		width: 22px;
+		height: 22px;
+	}
+
+	#backtoblog, #nav {
+		padding: 0 30px;
+		text-align: center;
+
+		a {
+			// color: $color-white;
+
+			&:hover, &:focus {
+				// color: $color-aqua;
+			}
+		}
+	}
+
+	#login_error, .message, .success {
+		// color: $color-white;
+		background-color: unset;
+		padding: 10px 0;
+		border: none;
+		margin-top: 40px;
+		text-align: center;
+		box-shadow: none;
+	}
+
+	.button-primary,
+	.wp-core-ui .button,
+	.wp-core-ui .button.button-large, 
+	.wp-core-ui .button-group.button-large .button {
+		float: none;
+		width: 100%;
+		height: 45px;
+		font-weight: 300;
+		line-height: 45px;
+		// background: $color-aqua-dark;
+		border: none;
+		// border-radius: $corners;
+		padding: 0 15px;
+		margin: 0;
+		text-shadow: none;
+		box-shadow: none;
+		transition: 0.3s ease-in-out;
+
+		&:hover, &:focus {
+			// background: lighten($color-aqua-dark, 5);
+		}
+	}
+
+	.g-recaptcha-wrap {
+		padding: 0 !important;
+		margin: 0 0 20px 0;
+	}
+}

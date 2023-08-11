@@ -1393,13 +1393,13 @@ body.woocommerce-checkout .woocommerce-shipping-destination {
 
 /* End of woocommerce checkout */
 /* Cart */
-body.page-cart .coupon {
+ body.page-checkout.coupon {
   margin-bottom: 20px;
 }
-body.page-cart .coupon .input-text {
+body.page-checkout .coupon .input-text {
   width: auto;
 }
-body.page-cart .cart_totals {
+body.page-checkout .cart_totals {
   text-align: left;
 }
 

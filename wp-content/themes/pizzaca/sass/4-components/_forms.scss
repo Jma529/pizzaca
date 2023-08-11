@@ -1,0 +1,49 @@
+.wp-block-jetpack-contact-form {
+  margin: 0 auto;
+}
+
+.wpcf7-spinner {
+  display: block;
+}
+
+/* Mailchimp sign up form */
+
+#mc_embed_signup{
+  clear:left; 
+  width: 100%;
+  font-family: $font__main;
+  padding: 0;
+
+  .indicates-required {
+    display: none;
+  }
+
+  .button {
+    color: $color__text-main-rev;
+    border: 1px solid $color__text-main-rev;
+    border-radius: 0px;
+    background-color: transparent;
+    width: 100%;
+
+    &:hover {
+      color: $color__dark;
+      background-color: $color__light;
+    }
+
+    &:active,
+    &:focus {
+      color: $color__light;
+    }
+  }
+  
+  .mc-field-group 
+    label {
+      display: none;
+    }
+ 
+    #mce-success-response {
+      color: $color__text-main-rev;
+    }
+
+}
+

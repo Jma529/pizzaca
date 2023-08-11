@@ -1,0 +1,76 @@
+// .page-template-front-page {
+//   height: 100vh;
+//   overflow: hidden;
+
+//   @include breakpoint(sm) {
+//     overflow-y: auto;
+//   }
+
+//   .bg-topo {
+//     bottom: -13%;
+
+//     @include breakpoint(md){
+//       bottom: 0;
+//     }
+//   }
+
+//   .site-logo {
+//     width: 225px;
+
+//     &.mobile {
+//       display: none;
+//     }
+//   }
+  
+//   .animation-wrap{
+//     display: none; 
+    
+//     &.coming-soon {
+//       display: block;
+      
+//       height: 400px;
+//       width: 500px;
+//       video {
+//         position: static;
+//         width: 100%;
+//         bottom: 30%;
+//       }
+//     }
+//   }
+//    .header {
+//       display: none;
+//     }
+
+//   .coming-soon {
+//     width: 100%;
+//     height: 100vh;
+
+//     .wrapper {
+//       height: 100%;
+//       width: 100%;
+//       .flex {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: flex-start;
+//         height: 100%;
+//         position: relative;
+//         padding-top: 50px;
+//       }
+//       .contact-info {
+//         color: $color__text-black;
+//         text-align: center;
+
+//         h2 {
+//           font-family: $font__main;
+//           font-size: 18px;
+//           text-transform: uppercase;
+//         }
+//         p {
+//          margin: 0;
+//         }
+
+//       }
+//     }
+//   }
+// }

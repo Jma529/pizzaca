@@ -1,0 +1,20 @@
+button, .button.contact-button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	color: $color__text-main;
+	border: 1px solid #24282a;
+	border-radius: 0px;
+	padding: 10px 20px;
+	background-color: transparent;
+
+
+	&:hover {
+		color: $color__link-hover;
+	}
+
+	&:active,
+	&:focus {
+		color: $color__link-hover;
+	}
+}
