@@ -8,6 +8,9 @@ a {
 			color: $color__dark;
 			text-decoration: underline;
 		}
+		&:visited {
+			color: $color__gray;
+		}
 	}
 
 	&.wc-quick-view-button {

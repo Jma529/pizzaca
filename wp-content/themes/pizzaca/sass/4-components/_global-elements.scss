@@ -46,12 +46,28 @@
  
   }
 
-
-
 .col-50 {
   width: 50%;
 }
 
 .col-75 {
   width: 75%;
+}
+
+/* Colors */
+
+.text-dark {
+  color: $color__dark;
+}
+
+.text-light {
+  color: $color__light;
+}
+
+.text-black {
+  color: $color__black;
+}
+
+.text-gray {
+  color: $color__gray;
 }

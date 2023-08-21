@@ -838,6 +838,23 @@ input[type=submit]:focus {
   width: 75%;
 }
 
+/* Colors */
+.text-dark {
+  color: #24282a;
+}
+
+.text-light {
+  color: #f1eed6;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.text-gray {
+  color: #53565a;
+}
+
 /* Front page */
 .page-template-front-page .header {
   background-color: rgba(36, 40, 42, 0.5);
@@ -1075,6 +1092,9 @@ a.link-dark {
 a.link-dark:hover {
   color: #24282a;
   text-decoration: underline;
+}
+a.link-dark:visited {
+  color: #53565a;
 }
 a.wc-quick-view-button {
   color: #24282a;
@@ -1393,13 +1413,13 @@ body.woocommerce-checkout .woocommerce-shipping-destination {
 
 /* End of woocommerce checkout */
 /* Cart */
- body.page-checkout.coupon {
+body.page-cart .coupon {
   margin-bottom: 20px;
 }
-body.page-checkout .coupon .input-text {
+body.page-cart .coupon .input-text {
   width: auto;
 }
-body.page-checkout .cart_totals {
+body.page-cart .cart_totals {
   text-align: left;
 }
 
