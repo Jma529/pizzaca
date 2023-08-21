@@ -1,0 +1,126 @@
+.wp-admin {
+
+    // Style the 'your session has expired' login pop up in admin so it matches the login form styling
+    #wp-auth-check-wrap #wp-auth-check {
+      // background-color: $color-grey-100;
+      // color: $color-white;
+      width: 420px;
+    }
+  
+    // Fix the overflow bug on the submit postbox div
+    #submitdiv {
+      overflow: hidden;
+    }
+  
+    // Subtle style tweaks to postbox
+    .postbox {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: none;
+  
+      &.closed .hndle {
+        border: none;
+      }
+    }
+  
+    // Subtle tweaks to notices
+    .notice {
+      border-radius: 4px;
+      box-shadow: none;
+    }
+  
+    // Even the top margin of the #poststuff to match the other 3 edges
+    #poststuff .inside {
+      margin: 12px 0 0 0;
+    }
+  
+    // Tweak 'featured image' to match ACF
+    #postimagediv .inside img {
+      border-radius: 4px;
+      border: 1px solid #7e8993;
+    }
+  
+    // Unset sortable metaboxes height to fix uneven spacing and unnecessary gaps
+    #post-body #normal-sortables {
+      min-height: auto;
+    }
+  
+    // Set the select fields in page/post attributes metabox to be full width
+    #poststuff .inside #parent_id, 
+    #poststuff .inside #page_template {
+      width: 100%;
+    }
+  
+    // Tweaks to the page title and 'add new' button
+    .wrap .wp-heading-inline {
+      margin-right: 15px;
+      
+      + .page-title-action {
+        padding: 7px 12px;
+        border-radius: 4px;
+      }
+    }
+  
+    // Style change to ACF fields (must have this class applied in field settings to work)
+    .pl-acf-field {
+      
+      .acf-editor-wrap .wp-editor-container,
+      .acf-image-uploader .image-wrap {
+        border: 1px solid #7e8993;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+  
+      .acf-image-uploader .image-wrap {
+        max-width: 250px !important;
+      }
+  
+      .acf-editor-wrap .wp-editor-tools:empty + .wp-editor-container {
+        border-color: red;
+      }
+  
+      select {
+        padding: 4px 8px;
+      }
+    }
+  
+    // Custom settings pages
+    #pl-admin-settings {
+  
+      h2 {
+        font-size: 14px;
+        line-height: 19px;
+        background-color: #ffffff;
+        margin: 20px 0 0 0;
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid #ccd0d4;
+        cursor: pointer;
+      }
+  
+      // This styling is to support the older theme settings page which used tables
+      .form-table {
+        display: block;
+        width: auto;
+        margin: -5px 0 0 0;
+        background-color: #ffffff;
+        border-radius: 0 0 5px 5px;
+        padding: 14px 0 10px 0;
+        border: 1px solid #ccd0d4;
+        border-top: none;
+  
+        th {
+          padding: 12px;
+          vertical-align: middle;
+          font-size: 13px;
+          font-weight: 500;
+          width: 150px;
+        }
+  
+        td {
+          padding: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }

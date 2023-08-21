@@ -1,0 +1,63 @@
+//=============================================================================================================
+// Brand Fonts
+//=============================================================================================================
+/* Headings */
+
+@font-face {
+	font-family: 'Akrobat';
+    src: url('fonts/akrobat-regular.eot');
+		src: url('fonts/akrobat-regular.woff2') format('woff2'),
+		 		 url('fonts/akrobat-regular.woff') format('woff'),
+         url('fonts/akrobat-regular.ttf') format('truetype'),
+				 url('fonts/akrobat-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AkrobatBlack';
+	src: url('fonts/akrobat-black.eot');
+	src: url('fonts/akrobat-black.woff2') format('woff2'),
+			 url('fonts/akrobat-black.woff') format('woff'),
+			 url('fonts/akrobat-black.ttf') format('truetype'),
+			 url('fonts/akrobat-black.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+	font-family: 'AkrobatExtraBold';
+  src: url('fonts/akrobat-extrabold.eot');
+	src: url('fonts/akrobat-extrabold.woff2') format('woff2'),
+		 		 url('fonts/akrobat-extrabold.woff') format('woff'),
+         url('fonts/akrobat-extrabold.ttf') format('truetype'),
+				 url('fonts/akrobat-extrabold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Paragrah */
+
+@font-face {
+	font-family: 'Jost';
+	src: url('fonts/jost.eot');
+	src: url('fonts/jost.woff2') format('woff2'),
+		 		 url('fonts/jost.woff') format('woff'),
+         url('fonts/jost.ttf') format('truetype'),
+				 url('fonts/jost.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Accent */
+
+@font-face {
+	font-family: 'Cervantis';
+	src: url('fonts/cervantis.eot');
+	src: url('fonts/cervantis.woff2') format('woff2'),
+		 		 url('fonts/cervantis.woff') format('woff'),
+         url('fonts/cervantis.ttf') format('truetype'),
+				 url('fonts/cervantis.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
