@@ -1,0 +1,289 @@
+/*
+Theme Name: Pizzaca
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3d9cd2;
+
+
+  
+  td.product-thumbnail, th.product-thumbnail {
+    display: none;
+  }
+  
+  .product-name a, .product-remove a, .product-subtotal {
+    color: black;
+  }
+  .wc-proceed-to-checkout a, .shipping-calculator-button  {
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  
+  
+  .wp-block-button__link {
+    color: $color__text-main;
+    border: 1px solid $color__text-main;
+    border-radius: 0px;
+    padding: 10px 20px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color__text-main;
+      color: $color__text-main-rev;
+    }
+
+    &:visited {
+      color: $color__gray;
+    }
+  }
+
+  .wp-block-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  /* Cart and Checkout page */
+  body.woocommerce-checkout {
+
+    .col-1 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .woocommerce-billing-fields__field-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+
+    .shipping_address {
+      width: 100%;
+    }
+      
+    .woocommerce-shipping-fields__field-wrapper, .woocommerce-additional-fields__field-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 20px 0;
+      }
+
+    
+    .woocommerce-billing-fields {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h3 {
+        @include font-size(18);
+        text-transform: uppercase;
+        font-family: $font__headings;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+    }
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .woocommerce-input-wrapper {
+          width: 100%;
+        }
+
+        .input-text {
+          width: 100%;
+        }
+      }
+
+    .col-2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: "AkrobatExtraBold", Helvetica, Arial, sans-serif;
+        margin-bottom: 20px;
+      }
+    }
+
+    .woocommerce-form-coupon-toggle {
+      display: none;
+    }
+
+    .woocommerce-form-login-toggle {
+      display: flex;
+
+      .woocommerce-info {
+        display: flex;
+        gap: 10px;
+        font-weight: bold;
+
+        a {
+          font-weight: normal;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    #billing_company_field {
+      display: none;
+    }
+    .woocommerce-checkout-review-order {
+      width: 100%;;
+    }
+
+    .shop_table {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      
+      thead {
+       display: none;
+      }
+
+      tbody {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      tfoot {
+        width: 80%;
+      }
+
+      tr {
+        display: flex;
+        justify-content: space-between;
+
+        &.order-total {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .woocommerce-checkout-payment {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+
+      .place-order {
+        margin-top: 20px;
+      }
+    }
+
+    .woocommerce-privacy-policy-text {
+    display: none;
+    }
+
+    .woocommerce-shipping-destination {
+      display: none;
+    }
+  } /* End of woocommerce checkout */
+
+ /* Cart */
+ body.page-cart {
+
+  .coupon {
+    margin-bottom: 20px;
+  
+    .input-text {
+      width: auto;
+    }
+  }
+  
+  .cart_totals {
+    text-align: left;
+  }
+ }
+
+
+
+/**
+ * woocommerce-layout.scss
+ * Applies layout to the default WooCommerce frontend design
+ */
+
+ .woocommerce,
+ .woocommerce-page {
+ 
+ 
+   /**
+    * General layout styles
+    */
+   .col2-set {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px 0;
+
+      @include breakpoint(sm) {
+        grid-template-columns: 1fr;
+      }
+   }
+ 
+   img {
+     height: auto;
+     max-width: 100%;
+   }
+ 
+  
+   #payment {
+ 
+     .form-row {
+ 
+       select {
+         width: auto;
+       }
+     }
+ 
+     .wc-terms-and-conditions,
+     .terms {
+       text-align: left;
+       padding: 0 1em 0 0;
+       float: left;
+     }
+ 
+     #place_order {
+       float: right;
+     }
+   }
+ 
+   .woocommerce-billing-fields,
+   .woocommerce-shipping-fields,
+   .woocommerce-additional-fields {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+ 
+   .woocommerce-terms-and-conditions {
+     margin-bottom: 1.618em;
+     padding: 1.618em;
+   }
+   // Stripe 
+
+   .wc-stripe-elements-field, .wc-stripe-iban-element-field, .stripe-card-group {
+      width: 100%;
+   }
+  }
+ 
+
+  

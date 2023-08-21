@@ -1,0 +1,53 @@
+body {
+	background: $color__light; // Fallback for when there is no custom background color defined.
+	width: 100%;
+	
+	section {
+		position: relative;
+		padding-top: 60px;
+
+		&.top {
+			padding-top: 200px;
+		}
+	}
+
+	.site {
+		@include breakpoint(sm) {
+			flex-direction: column;
+		}
+	}
+
+	.site-main {
+		width: $size__site-main;
+	}
+
+	.wrapper {
+		width: 100%;
+		max-width: $constrain-page;
+		margin: 0 auto;
+		padding: $container-pad;
+
+		&.full-width {
+			max-width: 100vw;
+		}
+
+		@include breakpoint(sm) {
+			padding: $container-pad-tablet;
+			max-width: 100vw;
+		}
+	
+		@include breakpoint(xs) {
+			padding: $container-pad-mobile;
+		}	
+	}
+
+
+	.content {
+		display: flex;
+
+		&.vertical {
+			flex-direction: column;
+		}
+	}
+
+} 

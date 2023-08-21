@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Utilities
+	- Accessibility
+	- Alignments
+	- Mixins
+	- Variables 
+# Admin
+	- Admin Login
+	- Admin Skin
+# Base
+	- Body
+	- Type
+# Components
+	- Buttons
+	- Footer
+	- Forms
+	- Galleries
+	- Global elements
+	- Header
+	- Hr
+	- Inputs
+	- Links
+	- Lists
+	- Media
+	- Social links
+	- Tables
+	- Widgets
+# Layouts
+	- Sidebar
+	- No Sidebar
+	- Posts and pages
+	- Sidebar Content
+# Generic
+	- Box sizing
+	- Normalize
+# plugins
+	- Jetpack infinite scroll
+	- Woocommerce
+
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import '1-utilities/accessibility';
+@import '1-utilities/fonts';
+@import '1-utilities/mixins';
+@import '1-utilities/reset';
+@import '1-utilities/variables';
+
+/*--------------------------------------------------------------
+# Admin
+--------------------------------------------------------------*/
+@import '2-admin/admin-login';
+@import '2-admin/admin-skin';
+
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import '3-base/body';
+@import '3-base/type';
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import '4-components/buttons';
+@import '4-components/footer';
+@import '4-components/forms';
+@import '4-components/galleries';
+@import '4-components/global-elements';
+@import '4-components/header';
+@import '4-components/hr';
+@import '4-components/inputs';
+@import '4-components/links';
+@import '4-components/lists';
+@import '4-components/media';
+@import '4-components/social-links';
+@import '4-components/tables';
+@import '4-components/widgets';
+@import '4-components/woocommerce';
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+@import '5-layouts/posts-and-pages';
+@import '5-layouts/front-page';
+@import '5-layouts/coming-soon';
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+@import "generic/box-sizing";
+
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/

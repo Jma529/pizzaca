@@ -1,0 +1,59 @@
+.site-footer {
+position: relative;
+ display: flex;
+ justify-content: center;
+ background-color: $color__dark;
+ color: $color__light;
+@include font-size(16);
+
+  @include breakpoint(md) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-flex {
+    @include breakpoint(md) {
+      padding-top: 30px;
+    }
+  }
+
+  .site-info {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    p {
+      margin-right: 15px;
+    }
+  }
+
+  .footer-logo {
+    .logo {
+      width: 150px;
+    }
+  }
+}
+
+.footer-right {
+  flex-grow: 1;
+}
+
+.footer-nav {
+  justify-content: space-around;
+
+  .nav-item {
+    max-width: 25%;
+    
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+  }
+  .menu-items {
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
